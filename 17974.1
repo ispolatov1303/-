@@ -1,0 +1,15 @@
+def F(n):
+    if n < 5:
+        return 4**4
+    else:
+        return 4*F(n-4)+4
+
+print(F(4048)/F(4036))
+
+#17872
+F = [0]*2025
+F[0] = 1
+for n in range(2024):
+    F[n+1] = F[n]*(n+1)
+
+print((F[2023]+2*F[2022])/F[2021])
