@@ -1,0 +1,6 @@
+F = [0]*4050
+for n in range(5):
+    F[n] = 4**4
+for n in range(5, 4050):
+    F[n] = 4*F[n-4] + 4
+print(F[4048]/F[4036])
