@@ -1,0 +1,9 @@
+F = [0]*28
+for n in range(11):
+    F[n] = n
+for n in range(11, 28):
+    if n % 2 == 0:
+        F[n] = 2*F[n-2] + 6
+    else:
+        F[n] = F[n-1] + 2*n
+print(F[27]-F[20])
