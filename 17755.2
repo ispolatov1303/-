@@ -1,0 +1,6 @@
+F = [0]*500
+for n in range(401, 500):
+    F[n] = n**n
+for n in range(400, 71, -1):
+    F[n] = n + 6 + F[n+12]
+print(F[72]-F[108])
